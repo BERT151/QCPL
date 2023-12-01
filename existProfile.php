@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quezon City Public Library Queue</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./images/qcplLogo.png" type="image/x-icon">
-    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    
-</head>
+<?php 
+require_once("./includes/head.php")
+?>
 <body>
 
     <section id="swup" class="transtion-fade">

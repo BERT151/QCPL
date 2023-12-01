@@ -30,7 +30,7 @@
     background-size: cover;
   }
   .container{
-    margin:0 14%;
+    margin:-10% 10%;
 
   }
   .promotext{
@@ -53,9 +53,9 @@
     text-align: center;
     box-shadow: 3px 6px 30px 8px rgb(58 58 58 / 15%);
     background: rgb(0, 52, 134 / 50%);
-    right: 15%;
-    bottom: 12%;
-    height: 57%;
+    right: 9%;
+    bottom: 2%;
+    height: 70%;
     border: 1px solid ;
     border-top-color: #13a561;
     border-left-color: rgb(24, 114, 94);
@@ -301,7 +301,75 @@ select option[value=""] [disabled]{
     cursor: pointer;
     border-radius: 3px;
 }
+/* start of feedback design */
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numPan{
+  width: 400px;
+  padding: 20px;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;   
+  background-color: #B0A695;
+}
+.inputnum{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #fff;
+  text-align: center;
+  background:#fff;
+  font-size: 2em;
+  border-radius: 5px;
+}
+.textBox{
+  margin: 10px;
+  color: #fff;
+}
 
+.numPan .nums > .r div{
+  width: 100px;
+  height: 80px;
+  margin: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #F3EEEA;
+  color: black;
+  font-size: 2em;
+  font-weight: 600;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0,0,0,0.2);
+}
+.feedbackbtn{
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  background: #13a561;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  font-size: 20px;
+  padding: 18px 80px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
+  margin-top: 12px;
+
+}
+.feedbackbtn:hover{
+  background: #fff;
+  color: #13a561;
+  transition: 0.3s ease-in;
+}
+
+/* end of feedback design */
   @media only screen and (max-width: 1520px){
     .promotext{
         padding-top: 30%;
@@ -322,9 +390,9 @@ select option[value=""] [disabled]{
         text-align: center;
         box-shadow: 3px 6px 30px 8px rgb(58 58 58 / 15%);
         background: rgb(0, 52, 134 / 50%);
-        right: 1%;
-        bottom: 20%;
-        height: 57%;
+        right: 5%;
+        bottom: 2%;
+        height: 70%;
         border: 1px solid ;
         border-top-color: #13a561;
         border-left-color: rgb(24, 114, 94);
