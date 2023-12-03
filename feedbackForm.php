@@ -129,7 +129,7 @@ body {
 </style>
 <body>
 
-<form id="regForm" action="/action_page.php">
+<form id="regForm" action="/">
   <h1>Feedback Form</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
