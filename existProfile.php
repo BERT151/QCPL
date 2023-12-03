@@ -3,7 +3,7 @@ require_once("./includes/head.php")
 ?>
 <body>
 
-    <section id="swup" class="transtion-fade">
+    <section>
     <div class="logo">
             <img src="./images/qclogo.jpg" alt="">
             <div class="title">
@@ -38,7 +38,8 @@ require_once("./includes/head.php")
                         <input type="checkbox" id="checkbox1">Other
                         <input type="text" name="" id="dialog1">
                     </div>
-                    <a href="profileForm.php" class="existBtn">Don't have Account?</a>
+                    <button class="existBtn" onclick="window.location.href='queue.php';">
+                    <a href="queue.php" class="existBtn">Don't have Account?</a></button>
                     <button class="profileBtn">Submit</button>
                 </form>
             </div>
@@ -75,8 +76,5 @@ require_once("./includes/head.php")
    </head>
 
 
-    
-    <script src="https://unpkg.com/swup@4"></script>
-    <script src="script.js"></script>
 </body>
 </html>
