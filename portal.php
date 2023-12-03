@@ -21,8 +21,9 @@ require_once("./includes/head.php")
                  offered by different department agencies of the Philippines.</p>
             </div>
             <div class="pathBtn">
-               <a href="queue.php" class="QueueBtn">To Queue</a>
-               <a href="feedback.php" class="FeedbackBtn">To Feedback</a>
+                <button class="QueueBtn" onclick="window.location.href='queue.php';">To Queue</button>
+               <button class="FeedbackBtn" onclick="window.location.href='feedback.php';">To Feedback</button>
+               <!-- <a href="feedback.php" class="FeedbackBtn">To Feedback</a> -->
             </div>
         </div>
     </section>
