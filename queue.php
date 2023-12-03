@@ -22,9 +22,9 @@ require_once("./includes/head.php")
                 <form action="">
                     <h3>Demographic Form</h3>
                     <div class="form-group">
-                        <input type="text" name="surname" id="" placeholder="Surname" class="form-control">
-                        <input type="text" name="firstname" id="" placeholder="Firstname" class="form-control">
-                        <input type="text" name="suffix" id="" placeholder="Suffix" class="form-control">
+                        <input type="text" name="surname" id="" placeholder="Surname" class="form-control" required>
+                        <input type="text" name="firstname" id="" placeholder="Firstname" class="form-control" required>
+                        <input type="text" name="suffix" id="" placeholder="Suffix" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <input type="date" name="" id="">
@@ -68,7 +68,8 @@ require_once("./includes/head.php")
                         <input type="checkbox" id="checkbox1">Other
                         <input type="text" name="" id="dialog1">
                     </div>
-                    <a href="existProfile.php" class="existBtn">Already have Account?</a>
+                    <button class="existBtn" onclick="window.location.href='existProfile.php';">Already have Account?</button>
+                    <!-- <a href="existProfile.php" class="existBtn">Already have Account?</a> -->
                     <button class="profileBtn">Submit</button>
                 </form>
             </div>
