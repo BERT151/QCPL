@@ -25,11 +25,11 @@ require_once("./includes/head.php")
                 <p>to your account</p>
                 <div class="logbox">
                     <div class="inputbox">
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" required>
                         <span>User name</span>
                     </div>
                     <div class="inputbox">
-                        <input type="password" name="pass" id="pass">
+                        <input type="password" name="pass" id="pass" required>
                         <span>Password</span>
                     </div>
                 </div>
