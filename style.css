@@ -64,39 +64,54 @@
     border-radius: 8px;
     backdrop-filter: blur(5px);
   }
-  .login h4{
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #13a561;
-  }
-  .login p{
-    font-size: 18px;
-    color: #13a561;
-    margin-bottom: 100px;
-  }
-  .inputbox{
-    position: relative;
-    margin-bottom: 50px;
-  }
-  .inputbox input{
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #ddedff;
-    border: none;
-    border-bottom: 1px solid #abe0ff;
-    background-color: transparent;
-    padding: 4px 3px;
-    outline: none;
-  }
-  .inputbox span{
-    position:absolute;
-    left: 2px;
-    bottom: 40px;
-    letter-spacing: 1px;
-    color: #13a561;
-  }
+
+.login h4{
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.login p{
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 100px;
+}
+.inputbox{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.inputbox input{
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ddedff;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+}
+.inputbox span{
+  position:absolute;
+  pointer-events: none;
+  font-size: 1em;
+  left: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+  color: #13a561;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+}
   .button{
     text-decoration: none;
     position: relative;
