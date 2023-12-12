@@ -31,18 +31,42 @@
   }
   .container{
     margin:-10% 10%;
-
+  }
+  .container-1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   .promotext{
     padding-top: 30%;
     color: #ddedff;
 
   }
+  .promotext-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ddedff;
+  }
   .promotext h3{
     font-size: 5rem;
     line-height:1 ;
   }
+  .promotext-1 h3{
+    font-size: 5rem;
+    line-height:1 ;
+  }
   .promotext p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 40px;
+  }
+  .promotext-1 p{
     font-size: 1rem;
     font-weight: 300;
     margin-top: 40px;
@@ -52,15 +76,10 @@
     padding: 50px 80px;
     text-align: center;
     box-shadow: 3px 6px 30px 8px rgb(58 58 58 / 15%);
-    background: rgb(58 58 58 / 15%);
+    background: rgba(255, 255, 255);
     right: 9%;
     bottom: 15%;
     height:60%;
-    border: 1px solid ;
-    border-top-color: #13a561;
-    border-left-color: rgb(24, 114, 94);
-    border-bottom-color: #00000030;
-    border-right-color: #05110d30;
     border-radius: 8px;
     backdrop-filter: blur(5px);
   }
@@ -69,11 +88,11 @@
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #fff;
+  color: #000000;
 }
 .login p{
   font-size: 18px;
-  color: #fff;
+  color: #000000;
   margin-bottom: 100px;
 }
 .inputbox{
@@ -85,11 +104,11 @@
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 2px;
-  color: #ddedff;
+  color: #000000;
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid #13a561;
   background-color: transparent;
   padding: 10px;
   outline: none;
@@ -102,7 +121,7 @@
   padding: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
+  color: #000000;
   transition: 0.5s;
 }
 .inputbox input:valid ~ span,
@@ -112,28 +131,43 @@
   font-size: 0.65em;
   padding: 0 10px;
 }
-  .button{
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-    background: #13a561;
-    color: #ffffff;
-    font-weight: 600;
-    border: none;
-    font-size: 20px;
-    padding: 18px 80px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
-  }
-  .button:hover{
-    background: #ffffff;
-    color: #13a561;
-    font-weight: 600;
-    border: none;
-    transition: 0.3s ease-in-out;
-    border: 1px solid #fff ease;
-  }
+
+.button{
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  border:1px solid #13a561;
+  color: #13a561;
+  background: none;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 18px 80px;
+  text-transform: uppercase;
+  box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
+}
+.button:hover{
+color: #fff;
+}
+.button::before{
+content: "";
+position:absolute;
+left: 0;
+top:0;
+width: 100%;
+height: 100%;
+z-index: -1;
+background:#13a561;
+transition: transform 0.5s;
+transform-origin: 0 0;
+transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.button::before{
+transform: scaleX(0);
+
+}
+.button:hover::before{
+transform: scaleX(1);
+}
   .logo{
     display: flex;
     justify-content: center;
@@ -155,43 +189,73 @@
     text-decoration: none;
     position: relative;
     cursor: pointer;
-    background: #13a561;
+    border:1px solid #13a561;
     color: #ffffff;
+    background: none;
     font-weight: 600;
-    border: none;
     font-size: 20px;
     padding: 18px 80px;
     text-transform: uppercase;
-    border-radius: 50px;
     box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
 }
 .QueueBtn:hover{
-    background: #ffffff;
-    color: #13a561;
-    font-weight: 600;
-    border: none;
-    transition: 0.3s ease-in-out;
+  color: #fff;
+}
+.QueueBtn::before{
+  content: "";
+  position:absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background:#13a561;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.QueueBtn::before{
+  transform: scaleX(0);
+  
+}
+.QueueBtn:hover::before{
+  transform: scaleX(1);
 }
 .FeedbackBtn{
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-    background: #13a561;
-    color: #ffffff;
-    font-weight: 600;
-    border: none;
-    font-size: 20px;
-    padding: 18px 80px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  border:1px solid #13a561;
+  color: #ffffff;
+  background: none;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 18px 80px;
+  text-transform: uppercase;
+  box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
 }
 .FeedbackBtn:hover{
-    background: #ffffff;
-    color: #13a561;
-    font-weight: 600;
-    border: none;
-    transition: 0.3s ease-in-out;
+color: #fff;
+}
+.FeedbackBtn::before{
+content: "";
+position:absolute;
+left: 0;
+top:0;
+width: 100%;
+height: 100%;
+z-index: -1;
+background:#13a561;
+transition: transform 0.5s;
+transform-origin: 0 0;
+transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+.FeedbackBtn::before{
+transform: scaleX(0);
+
+}
+.FeedbackBtn:hover::before{
+transform: scaleX(1);
 }
 
 /* demographic profile design starts here */
@@ -211,11 +275,12 @@ img{
 }
 
 .inner{
-    padding: 20px;
+    padding: 15px;
     background: #fff;
-    max-width: 850px;
+    max-width: 1090px;
     margin: auto;
     display: flex;
+    border-radius: 5px;
 }
 .inner .image-holder{
     width: 50%;
@@ -263,30 +328,49 @@ select option[value=""] [disabled]{
     display: none;
 }
 .profileBtn{
-    cursor: pointer;
-    background: #13a561;
-    color: #ffffff;
-    font-weight: 600;
-    border: 1px solid #13a561;
-    font-size: 20px;
-    padding: 18px 80px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  border:1px solid #13a561;
+  color: #13a561;
+  background: none;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 18px 80px;
+  text-transform: uppercase;
+  box-shadow: 1 3px 8px 2px rgb(60, 60, 60 / 30%);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     margin: auto;
+    z-index: 99999999;
 }
 .profileBtn:hover{
-    background: #ffffff;
-    color: #13a561;
-    font-weight: 600;
-    border: none;
-    transition: 0.3s ease-in-out;
-    border: 1px solid gray;
+
+    color: #ffffff;
+
 }
+.profileBtn::before{
+  content: "";
+  position:absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background:#13a561;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  }
+  .profileBtn::before{
+  transform: scaleX(0);
+  
+  }
+  .profileBtn:hover::before{
+    transform: scaleX(1);
+    }
 .existBtn{
     color: gray;
     display: flex;
@@ -330,7 +414,7 @@ select option[value=""] [disabled]{
   border-radius: 5px;
   text-align: center;
   color: #fff;   
-  background-color: #B0A695;
+  background-color: #a1a09e;
 }
 .inputnum{
   width: 100%;

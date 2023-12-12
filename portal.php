@@ -12,17 +12,17 @@ require_once("./includes/head.php")
             </div>
             <img src="./images/qcplLogo.png" alt="">
         </div>
-        <div class="container">
-            <div class="promotext">
-                <h3>Welcome to </h3>
+        <div class="container-1">
+            <div class="promotext-1">
+                <h1>Welcome to </h1>
                 <h3>EngageMate</h3>
                 <p>Offers free assistance to all individuals <br>
                  who wish to access the online government services <br>
                  offered by different department agencies of the Philippines.</p>
             </div>
             <div class="pathBtn">
-                <button class="QueueBtn" onclick="window.location.href='queue.php';">To Queue</button>
-               <button class="FeedbackBtn" onclick="window.location.href='feedback.php';">To Feedback</button>
+                <button class="QueueBtn" onclick="window.location.href='queue.php';"> Queuing</button>
+               <button class="FeedbackBtn" onclick="window.location.href='feedback.php';">Feedback</button>
                <!-- <a href="feedback.php" class="FeedbackBtn">To Feedback</a> -->
             </div>
         </div>

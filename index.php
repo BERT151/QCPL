@@ -21,8 +21,8 @@ require_once("./includes/head.php")
                  offered by different department agencies of the Philippines.</p>
             </div>
             <div class="login">
-                <h4>Log in</h4>
-                <p>to your account</p>
+                <h4>Welcome Back!</h4>
+                <p>Login to continue</p>
                 <div class="logbox">
                     <div class="inputbox">
                         <input type="text" name="username" id="username" required>
@@ -33,7 +33,7 @@ require_once("./includes/head.php")
                         <span>Password</span>
                     </div>
                 </div>
-               <a href="portal.php" class="button">Log in</a>
+               <a href="portal.php" class="button" style="text-decoration: none;">Log in</a>
             </div>
             <div class="bcgimage"></div>
         </div>

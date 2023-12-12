@@ -25,7 +25,8 @@ require_once("./includes/head.php")
          <br>
          <p style="font-size: 1.5em;">Client Identifier</p>
          <p style="font-size: 1em; font-style:italic;">Note* This is type box will auto fill when your account exist.</p>
-         <input type="text" name="" id="" disabled class="inputnum">
+         <p style="font-size: 1em; font-style:italic;">Paalala* Ito ay kusang naglalagay ng pangalan kung kayo ay nakagawa na ng account.</p>
+         <input type="text" name="" id="" disabled class="inputnum" style="padding:0px;">
 
          <button type="button" class="btn btn-success feedbackbtn" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
          </div>
@@ -76,7 +77,7 @@ require_once("./includes/head.php")
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary"><a href="feedbackForm.php" style="text-decoration:none; color:#fff;">Yes</a></button>
+        <button type="button" class="btn btn-success"><a href="feedbackForm.php" style="text-decoration:none; color:#fff;">Yes</a></button>
       </div>
     </div>
   </div>

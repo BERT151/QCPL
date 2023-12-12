@@ -107,6 +107,7 @@ body {
     .reaction-container {
       display: flex;
       justify-content: space-around;
+      gap:0.5em;
     }
 
     .reaction {
@@ -126,12 +127,16 @@ body {
       font-size: 1.2em;
       margin-top: 10px;
     }
+    label{
+      font-size: 1em;
+    }
 </style>
 <body>
 
-<form id="regForm" action="/">
-  <h1>Feedback Form</h1>
+<form id="regForm" action="" method="POST">
   <!-- One "tab" for each step in the form: -->
+
+  <!-- emoji based answer starts here -->
   <div class="tab">
   
     <div id="question-container">
@@ -139,28 +144,27 @@ body {
     <div class="reaction-container">
         <div class="reaction">
         <img class="img1" src="./images/EMOJI/1.png" alt="Feeling">
-        <p class="word">Happy</p>
+        <p class="word">Very Satisfied</p>
         </div>
         <div class="reaction">
         <img class="img2" src="./images/EMOJI/2.png" alt="Feeling">
-        <p class="word">Excited</p>
+        <p class="word">Satisfied</p>
         </div>
         <div class="reaction">
         <img class="img3" src="./images/EMOJI/3.png" alt="Feeling">
-        <p class="word">Relaxed</p>
+        <p class="word">Neutral</p>
         </div>
         <div class="reaction">
       <img class="img4" src="./images/EMOJI/4.png" alt="Feeling">
-        <p class="word">In Love</p>
+        <p class="word">Dissatisfied</p>
         </div>
         <div class="reaction">
         <img class="img5" src="./images/EMOJI/5.png" alt="Feeling">
-        <p class="word">Grateful</p>
+        <p class="word">Very Dissatisfied</p>
         </div>
     </div>
     </div>
   </div>
-
   <div class="tab">
   
     <div id="question-container">
@@ -176,7 +180,7 @@ body {
         </div>
         <div class="reaction">
         <img class="img3" src="./images/EMOJI/3.png" alt="Feeling">
-        <p class="word">Neither likely nor unlikely to recommend</p>
+        <p class="word">Neutral</p>
         </div>
         <div class="reaction">
       <img class="img4" src="./images/EMOJI/4.png" alt="Feeling">
@@ -189,7 +193,6 @@ body {
     </div>
     </div>
   </div>
-
   <div class="tab">
   
     <div id="question-container">
@@ -218,8 +221,6 @@ body {
     </div>
     </div>
   </div>
-
-
   <div class="tab">
   
     <div id="question-container">
@@ -227,11 +228,11 @@ body {
     <div class="reaction-container">
         <div class="reaction">
         <img class="img1" src="./images/EMOJI/1.png" alt="Feeling">
-        <p class="word">Very Helpful and Knowledgeable</p>
+        <p class="word">Very Knowledgeable</p>
         </div>
         <div class="reaction">
         <img class="img2" src="./images/EMOJI/2.png" alt="Feeling">
-        <p class="word">Helpful and Knowledgeable</p>
+        <p class="word">Knowledgeable</p>
         </div>
         <div class="reaction">
         <img class="img3" src="./images/EMOJI/3.png" alt="Feeling">
@@ -239,7 +240,7 @@ body {
         </div>
         <div class="reaction">
       <img class="img4" src="./images/EMOJI/4.png" alt="Feeling">
-        <p class="word">Not Very Helpful or Knowledgeable</p>
+        <p class="word">Not Very Knowledgeable</p>
         </div>
         <div class="reaction">
         <img class="img5" src="./images/EMOJI/5.png" alt="Feeling">
@@ -248,7 +249,6 @@ body {
     </div>
     </div>
   </div>
-
   <div class="tab">
   
     <div id="question-container">
@@ -277,8 +277,6 @@ body {
     </div>
     </div>
   </div>
-
-
   <div class="tab">
   
     <div id="question-container">
@@ -307,7 +305,6 @@ body {
     </div>
     </div>
   </div>
-
   <div class="tab">
   
   <div id="question-container">
@@ -336,37 +333,283 @@ body {
   </div>
   </div>
 </div>
+  <!-- emoji based answer ends here -->
+
+<!-- checkbox based answer design starts here -->
+<style>
+  .tab {
+    margin-top: 20px;
+  }
+
+  .question-container {
+    text-align: center;
+  }
+
+  #question {
+    font-size: 25px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .reaction-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .reaction {
+    margin: 10px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .checkbox-label:hover {
+    background-color: #e0e0e0;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+    display: none;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+
+  input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+
+  @media screen and (max-width: 600px) {
+    .reaction-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .checkbox-label {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+<!-- checkbox based answer design ends here -->
 
 
-
+<!-- checkbox based answer form start here -->
 <div class="tab">
-  
-  <div id="question-container">
-  <p id="question">❓Please share your comments on your overall experience in E-Government: ❓</p>
-  <div class="reaction-container">
+  <div class="question-container">
+    <p id="question">❓ How did you learn about our service? ❓</p>
+    <div class="reaction-container">
       <div class="reaction">
-      <img class="img1" src="./images/EMOJI/1.png" alt="Feeling">
-      <p class="word">Excellent Experience</p>
+        <label for="checkbox1" class="checkbox-label">
+          <input type="checkbox" name="checkbox1" id="checkbox1">
+          <div class="custom-checkbox"></div>
+          Online Search [ Sa Internet ]
+        </label>
       </div>
+
       <div class="reaction">
-      <img class="img2" src="./images/EMOJI/2.png" alt="Feeling">
-      <p class="word">Good Experience</p>
+        <label for="checkbox2" class="checkbox-label">
+          <input type="checkbox" name="checkbox2" id="checkbox2">
+          <div class="custom-checkbox"></div>
+          Word of Mouth [ Kwento ng Iba ]
+        </label>
       </div>
+
       <div class="reaction">
-      <img class="img3" src="./images/EMOJI/3.png" alt="Feeling">
-      <p class="word">Satisfactory</p>
+        <label for="checkbox3" class="checkbox-label">
+          <input type="checkbox" name="checkbox3" id="checkbox3">
+          <div class="custom-checkbox"></div>
+          Social Media [ Facebook, Twitter, Instagram, etc. ]
+        </label>
       </div>
+
       <div class="reaction">
-    <img class="img4" src="./images/EMOJI/4.png" alt="Feeling">
-      <p class="word">Average Experience</p>
+        <label for="checkbox4" class="checkbox-label">
+          <input type="checkbox" name="checkbox4" id="checkbox4">
+          <div class="custom-checkbox"></div>
+          Government Website [ Sa website ng pamahalaan ]
+        </label>
       </div>
+
       <div class="reaction">
-      <img class="img5" src="./images/EMOJI/5.png" alt="Feeling">
-      <p class="word">Disappointing</p>
+        <label for="checkbox5" class="checkbox-label">
+          <input type="checkbox" name="checkbox5" id="checkbox5">
+          <div class="custom-checkbox"></div>
+          Printed Materials (Flyers, Brochures) [ Naka-print na Materyales ]
+        </label>
       </div>
-  </div>
+
+      <div class="reaction">
+        <label for="checkbox6" class="checkbox-label">
+          <input type="checkbox" name="checkbox6" id="checkbox6">
+          <div class="custom-checkbox"></div>
+          Referral from a Friend or Family [ Sa payo ng kaibigan o kamag-anak ]
+        </label>
+      </div>
+    </div>
   </div>
 </div>
+<div class="tab">
+  <div class="question-container">
+    <p id="question">❓  In what areas do you think we can make improvements? ❓</p>
+    <div class="reaction-container">
+      <div class="reaction">
+        <label for="checkbox7" class="checkbox-label">
+          <input type="checkbox" name="checkbox7" id="checkbox7">
+          <div class="custom-checkbox"></div>
+          Customer Service
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox8" class="checkbox-label">
+          <input type="checkbox" name="checkbox9" id="checkbox8">
+          <div class="custom-checkbox"></div>
+          Service Variety
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox9" class="checkbox-label">
+          <input type="checkbox" name="checkbox9" id="checkbox9">
+          <div class="custom-checkbox"></div>
+          Facility Cleanliness and Organization
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox10" class="checkbox-label">
+          <input type="checkbox" name="checkbox10" id="checkbox10">
+          <div class="custom-checkbox"></div>
+          Timeliness of Service
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox11" class="checkbox-label">
+          <input type="checkbox" name="checkbox11" id="checkbox11">
+          <div class="custom-checkbox"></div>
+          Service Accessibility
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox12" class="checkbox-label">
+          <input type="checkbox" name="checkbox12" id="checkbox12">
+          <div class="custom-checkbox"></div>
+          Staff Knowledge and Training
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab">
+  <div class="question-container">
+    <p id="question">❓  Please select in which area would you like to provide a comment.  ❓</p>
+    <div class="reaction-container">
+      <div class="reaction">
+        <label for="checkbox13" class="checkbox-label">
+          <input type="checkbox" name="checkbox13" id="checkbox13">
+          <div class="custom-checkbox"></div>
+          Concerns or Issues Faced
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox14" class="checkbox-label">
+          <input type="checkbox" name="checkbox14" id="checkbox14">
+          <div class="custom-checkbox"></div>
+          Compliments on Excellent Service
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox15" class="checkbox-label">
+          <input type="checkbox" name="checkbox15" id="checkbox15">
+          <div class="custom-checkbox"></div>
+          Comments on Overall Experience
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab">
+  <div class="question-container">
+    <p id="question">❓ Category of concerns or issues faced: ❓</p>
+    <div class="reaction-container">
+      <div class="reaction">
+        <label for="checkbox16" class="checkbox-label">
+          <input type="checkbox" name="checkbox16" id="checkbox16">
+          <div class="custom-checkbox"></div>
+          Customer Service
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox17" class="checkbox-label">
+          <input type="checkbox" name="checkbox17" id="checkbox17">
+          <div class="custom-checkbox"></div>
+          Service Variety
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox18" class="checkbox-label">
+          <input type="checkbox" name="checkbox18" id="checkbox18">
+          <div class="custom-checkbox"></div>
+          Facility Cleanliness and Organization
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox19" class="checkbox-label">
+          <input type="checkbox" name="checkbox19" id="checkbox19">
+          <div class="custom-checkbox"></div>
+          Timeliness of Service
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox20" class="checkbox-label">
+          <input type="checkbox" name="checkbox20" id="checkbox20">
+          <div class="custom-checkbox"></div>
+          Service Accessibility
+        </label>
+      </div>
+
+      <div class="reaction">
+        <label for="checkbox21" class="checkbox-label">
+          <input type="checkbox" name="checkbox21" id="checkbox21">
+          <div class="custom-checkbox"></div>
+          Staff Knowledge and Training
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- checkbox based answer form ends here -->
+
 
 
   
@@ -386,6 +629,9 @@ body {
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+
   </div>
 </form>
 
