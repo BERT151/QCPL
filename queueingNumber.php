@@ -1,77 +1,115 @@
-<?php 
-require_once("./includes/head.php")
-?>
-<style>
-.grid-container {
-  display: grid;
-  gap: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorized Queue Number Display</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-.grid-item {
-  background-color: #F3EEEA;
-  text-align: center;
-  border-radius: 10px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  font-size: 30px;
-  height: 8em;
-  font-weight: 700;
-  box-shadow: 10px 10px 5px #aaaaaa;
-  overflow: hidden;
-}
+    header {
+      background-color: #13a561;
+      color: #fff;
+      font-size: 24px;
+    }
 
-.item1 {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-}
+    .container {
+      padding: 20px;
+      max-width: 400px;
+      display: flex;
+      justify-content:flex-end ;
+      flex-direction: column;
+    }
 
-.item2 {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-}
+    .queue-category {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
 
-.item3 {
-  grid-column: 1 / span 3;
-  grid-row: 3;
-}
-.queueTitle{
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-</style>
+    .queue-number {
+      font-size: 48px;
+      margin: 20px 0;
+      color: #3498db;
+    }
+
+    video {
+      width: 60%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #movieSection{
+      transform: translate(15%,-100%);
+      position: relative;
+      
+    }
+  </style>
 </head>
 <body>
 
-<h1 class="queueTitle">Queueing Number</h1>
+  <header>
+    Queue Number Display
+  </header>
 
-<div class="grid-container">
-  <div class="grid-item item1">NBI
-    <p>N-2312</p>
-    <p>N-2313</p>
-    <p>N-2314</p>
-    <p>N-2315</p>
-    <p>N-2316</p>
+  <div class="container">
+
+    <div class="queue-category">
+      <h2>NBI Queue</h2>
+      <div class="queue-number" id="nbiQueueNumber">Loading...</div>
+    </div>
+
+    <div class="queue-category">
+      <h2>Police Clearance Queue</h2>
+      <div class="queue-number" id="policeQueueNumber">Loading...</div>
+    </div>
+
+    <div class="queue-category">
+      <h2>Others Queue</h2>
+      <div class="queue-number" id="othersQueueNumber">Loading...</div>
+    </div>
+
+
+
   </div>
-  <div class="grid-item item2">POLICE CLEARANCE
-    <p>PC-2212</p>
-    <p>PC-2213</p>
-    <p>PC-2214</p>
-    <p>PC-2215</p>
-    <p>PC-2216</p>
-  </div>
-  <div class="grid-item item3">OTHERS
-  <p>0-2612</p>
-  <p>0-2613</p>
-  <p>0-2614</p>
-  <p>0-2615</p>
-  <p>0-2616</p>
-  </div>  
-</div>
-<h1 class="queueTitle">N-2312 <br>
-Please proceed to your transaction</h1>
+      <!-- Movie Section -->
+      <div id="movieSection">
+      <h2>Now Showing</h2>
+      <video controls>
+        <source src="your-movie-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  <script>
+    // Simulated function to get the updated queue number from the backend
+    function getUpdatedQueueNumber(category) {
+      // Replace this with actual logic to fetch the queue number from the backend
+      return Math.floor(Math.random() * 100) + 1;
+    }
+
+    // Function to update the queue number on the webpage
+    function updateQueueNumber(category) {
+      const queueNumberElement = document.getElementById(`${category}QueueNumber`);
+      const newQueueNumber = getUpdatedQueueNumber(category);
+      queueNumberElement.innerText = newQueueNumber;
+    }
+
+    // Initial update when the page loads
+    window.onload = function () {
+      updateQueueNumber('nbi');
+      updateQueueNumber('police');
+      updateQueueNumber('others');
+    };
+  </script>
+
 </body>
 </html>
-
-
